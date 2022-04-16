@@ -64,6 +64,22 @@
               <use href="./images/icons.svg#close-button"></use>
             </svg>
           </button>
+          <form action="feadback_form" class="modal-form">
+            <h2 class="form-title">Оставьте свои данные, мы вам перезвоним</h2>
+            <label for="username" class="input-lable">Имя</label>
+            <input type="text" name="username" class="input-field" />
+            <label for="phone_number" class="input-lable">Телефон</label>
+            <input type="tel" name="phone_number" class="input-field" />
+            <label for="email" class="input-lable">Почта</label>
+            <input type="email" name="email" class="input-field" />
+            <label for="comment" class="input-lable">Комментарий</label>
+            <textarea name="comment" id="" rows="3" placeholder="Введите текст" class="comment-field"></textarea>
+            <label for="conditions" class="conditios-check">
+              <input type="checkbox" name="conditions" value="aggre" />
+              Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a>
+            </label>
+            <button type="submit" class="submit-button">Отправить</button>
+          </form>
         </div>
       </div>
       <!--Section 2 Peculiarities-->
@@ -323,7 +339,7 @@
             </ul>
           </address>
         </div>
-        <div class="subscribtion">
+        <div class="join-us">
           <strong class="subscribe">присоединяйтесь</strong>
           <ul class="media-list">
             <li class="media-item">
@@ -347,6 +363,22 @@
               ></a>
             </li>
           </ul>
+        </div>
+        <div class="subscription">
+          <form action="subscription_form">
+            <strong class="subscribe">Подпишитесь на рассылку</strong>
+            <div class="subscribtion-thumb">
+              <label for="email">
+                <input type="email" name="email" placeholder="E-mail" />
+              </label>
+              <button type="submit" class="submit-button">
+                Подписаться
+                <svg width="24" height="24">
+                  <use href="./images/icons.svg#icon-send"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </footer>
