@@ -293,6 +293,20 @@ img {
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  position: relative;
+}
+.input-field.name::after {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  background-color: inherit;
+  left: 0;
+  top: 0;
+  background-image: url(../images/Person.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .comment-field {
   padding: 12px 16px;
