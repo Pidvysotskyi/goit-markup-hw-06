@@ -303,23 +303,32 @@ img {
 }
 .input-field {
   margin-bottom: 10px;
+  padding-left: 45px;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   position: relative;
 }
-.input-field.name::after {
-  display: inline-block;
-  position: absolute;
-  content: "";
-  height: 12px;
-  width: 12px;
-  background-color: inherit;
-  left: 0;
-  top: 0;
+.input-field.name {
   background-image: url(../images/Person.svg);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 12px;
+  background-position-x: 15px;
+  background-position-y: center;
+}
+.input-field.phone {
+  background-image: url(../images/Phone.svg);
+  background-repeat: no-repeat;
+  background-size: 13px;
+  background-position-x: 15px;
+  background-position-y: center;
+}
+.input-field.mail {
+  background-image: url(../images/Mail.svg);
+  background-repeat: no-repeat;
+  background-size: 15px 12px;
+  background-position-x: 15px;
+  background-position-y: center;
 }
 .comment-field {
   padding: 12px 16px;
@@ -332,6 +341,22 @@ img {
 .conditios-check {
   margin-bottom: 30px;
   line-height: 1.71;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.check-box {
+  position: relative;
+  margin-right: 9px;
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  background-image: url(../images/modal-checkbox.svg);
+}
+.hidden {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
 }
 .conditios-check a {
   font-style: normal;
