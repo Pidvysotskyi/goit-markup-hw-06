@@ -260,6 +260,7 @@ img {
 }
 .modal {
   width: 528px;
+  padding: 40px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -279,10 +280,16 @@ img {
   background-color: inherit;
   border-radius: 50%;
 }
+.close-icon {
+  fill: #000;
+  transition: fill var(--animation-time) var(--timing-function);
+}
+.close-button:hover > .close-icon {
+  fill: var(--active-text-color);
+}
 .modal-form {
   display: flex;
   flex-direction: column;
-  padding: 40px;
   height: 100%;
 }
 .form-title {
@@ -291,74 +298,127 @@ img {
   line-height: 1.15;
   text-align: center;
   color: var(--secondary-text-color);
+  margin-bottom: 30px;
 }
-.input-lable {
-  margin-bottom: 4px;
-
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-
-  color: var(--primary-text-color);
+.input-area {
+  position: relative;
+  margin-bottom: 28px;
 }
+
 .input-field {
-  margin-bottom: 10px;
-  padding-left: 45px;
+  display: block;
+  width: 100%;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  padding-left: 45px;
+  transition: border-color var(--animation-time) var(--timing-function);
+}
+.input-field:focus {
+  border-color: var(--active-text-color);
+  outline: none;
+}
+.input-title {
+  display: block;
+  position: absolute;
+  bottom: 100%;
+  transform: translateY(-4px);
+}
+.input-icon {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  fill: var(--secondary-text-color);
+  transition: fill var(--animation-time) var(--timing-function);
+}
+.input-field:focus + .input-icon {
+  fill: var(--active-text-color);
+}
+.comment-area {
   position: relative;
-}
-.input-field.name {
-  background-image: url(../images/Person.svg);
-  background-repeat: no-repeat;
-  background-size: 12px;
-  background-position-x: 15px;
-  background-position-y: center;
-}
-.input-field.phone {
-  background-image: url(../images/Phone.svg);
-  background-repeat: no-repeat;
-  background-size: 13px;
-  background-position-x: 15px;
-  background-position-y: center;
-}
-.input-field.mail {
-  background-image: url(../images/Mail.svg);
-  background-repeat: no-repeat;
-  background-size: 15px 12px;
-  background-position-x: 15px;
-  background-position-y: center;
+  margin-bottom: 20px;
 }
 .comment-field {
+  width: 100%;
   padding: 12px 16px;
-  margin-bottom: 20px;
   height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   resize: none;
 }
-.conditios-check {
-  margin-bottom: 30px;
-  line-height: 1.71;
+.comment-field:focus {
+  border-color: var(--active-text-color);
+  outline: none;
+}
+.conditions {
+  position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
 }
 .check-box {
-  position: relative;
-  margin-right: 9px;
-  display: inline-block;
-  width: 16px;
-  height: 15px;
-  background-image: url(../images/modal-checkbox.svg);
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
-.hidden {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
+.checked-icon {
+  position: absolute;
+  top: 50%;
+  left: 13px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  fill: var(--active-text-color);
 }
-.conditios-check a {
+.check-box:not(:checked) + .checked-icon {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.check-icon {
+  position: absolute;
+  top: 50%;
+  left: 13px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  fill: var(--secondary-text-color);
+}
+.check-box:checked ~ .check-icon {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.conditions-check {
+  width: 100%;
+  padding-left: 36px;
+}
+.checked .conditions-check a {
   font-style: normal;
   text-decoration-line: underline;
   color: var(--active-text-color);
