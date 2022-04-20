@@ -252,6 +252,7 @@ img {
   opacity: 1;
   visibility: visible;
   pointer-events: all;
+  transition: opacity var(--animation-time) var(--timing-function), visibility var(--animation-time) var(--timing-function), pointer-events var(--animation-time) var(--timing-function);
 }
 .backload.is-hidden {
   opacity: 0;
@@ -284,7 +285,8 @@ img {
   fill: #000;
   transition: fill var(--animation-time) var(--timing-function);
 }
-.close-button:hover > .close-icon {
+.close-button:hover > .close-icon,
+.close-button:focus > .close-icon {
   fill: var(--active-text-color);
 }
 .modal-form {
@@ -418,9 +420,8 @@ img {
   width: 100%;
   padding-left: 36px;
 }
-.checked .conditions-check a {
+.conditions-check a {
   font-style: normal;
-  text-decoration-line: underline;
   color: var(--active-text-color);
 }
 .submit-button {
